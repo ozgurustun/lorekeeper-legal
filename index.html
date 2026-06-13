@@ -3,7 +3,7 @@
   <head>                                                                                                                                                         
     <meta charset="utf-8">                                  
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lorekeeper — Privacy Policy</title>                                                                                                                   
+    <title>Lorekeeper Privacy Policy</title>                                                                                                                   
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }                                                                                                       
       body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1A120B; color: #E8D5B7; line-height: 1.7; }
@@ -23,30 +23,65 @@
       <div class="logo">Lorekeeper</div>
       <div class="tagline">Choose Your Story</div>                                                                                                               
    
-      <h2>Privacy Policy</h2>                                                                                                                                    
-      <p>Last updated: May 2026</p>                         
+      <h2>Privacy Policy</h2>
+      <p>Last updated: June 2026</p>
 
-      <h2>Information We Collect</h2>                                                                                                                            
-      <p>Lorekeeper uses third-party advertising (Appodeal) which may collect:</p>
-      <ul>                                                                                                                                                       
-        <li>Advertising ID (IDFA)</li>                      
-        <li>IP Address</li>
-        <li>Device information</li>                                                                                                                              
+      <h2>Account Identity</h2>
+      <p>Lorekeeper does not require you to create an account in the app. If you sign in to Apple Game Center on your device, we receive your Game Center player identifier from Apple's Game Center service. This identifier is a pseudonymous value used to back up your in-app progress and purchases to our server so they survive a reinstall or new device. We do not request or receive your real name, email address, phone number, or physical address.</p>
+
+      <h2>Information We Collect</h2>
+      <p>Lorekeeper collects the following information:</p>
+      <ul>
+        <li><strong>Game Center player identifier</strong> (pseudonymous), country code derived from your device locale, and an optional display name (alias) you set in Game Center.</li>
+        <li><strong>In-app purchase transaction records</strong> (Apple transaction IDs, product IDs, purchase status, amount of in-game gems granted). We do not store the raw Apple receipt; only a SHA-256 hash is retained for audit and fraud-prevention purposes.</li>
+        <li><strong>Cloud save data</strong>: your game progress, gem and ticket balances, achievements, daily streak, daily reward state, and app settings. This is stored as a JSON payload tied to your Game Center identifier.</li>
+        <li><strong>Push notification token</strong> (Firebase Cloud Messaging token) so we can send game-related notifications. Sent only if you grant notification permission.</li>
+        <li><strong>Rewarded ad grants</strong> (Appodeal impression IDs and reward amounts) so we can credit free gems earned by watching rewarded video ads.</li>
+        <li><strong>Advertising identifiers and device information</strong> via Appodeal (IDFA, IP address, device model and OS version). Collection is gated by Apple's App Tracking Transparency prompt.</li>
+        <li><strong>App usage analytics</strong> (anonymous event identifiers, screen views, sessions) via Firebase Analytics.</li>
+        <li><strong>Crash reports</strong> via Firebase Crashlytics. These contain stack traces and device state at the moment of an error. No personal identifiers are deliberately attached.</li>
       </ul>
-                                                                                                                                                                 
-      <h2>How We Use Information</h2>                       
-      <p>Collected data is used to serve personalized advertisements. You can permanently remove all ads via in-app purchase.</p>
-                                                                                                                                                                 
+
+      <h2>How We Use Information</h2>
+      <p>Collected data is used to:</p>
+      <ul>
+        <li>Authenticate your device session and back up game progress to the cloud so it can be restored on a new device.</li>
+        <li>Verify in-app purchases with Apple, prevent purchase fraud, and credit gems to the correct player.</li>
+        <li>Credit rewarded ad views to the correct player without client-side tampering.</li>
+        <li>Send relevant push notifications (only with your permission).</li>
+        <li>Display advertisements appropriate for the player and platform.</li>
+        <li>Diagnose crashes and improve app reliability.</li>
+      </ul>
+
+      <h2>Server-Side Storage</h2>
+      <p>Game progress, in-app purchase records, push notification tokens, and rewarded ad grants are stored on our backend servers (Cloudflare Workers, D1 database, and KV namespace) and linked to your Game Center pseudonymous identifier, not to your real name, email, or other personally identifying information. Raw Apple receipts are never retained; only a SHA-256 hash is stored for audit purposes.</p>
+
       <h2>Third-Party Services</h2>
-      <p>We use Appodeal for advertising. View their privacy policy at <a href="https://appodeal.com/privacy-policy">appodeal.com/privacy-policy</a>.</p>        
-                                                                                                                                                                 
+      <p>Lorekeeper integrates with the following third-party services:</p>
+      <ul>
+        <li><strong>Apple Game Center</strong> (Apple Inc.) for identity verification, see <a href="https://www.apple.com/legal/privacy/">Apple Privacy</a>.</li>
+        <li><strong>Cloudflare</strong> (Workers, D1, KV) as our server infrastructure subprocessor, see <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy</a>.</li>
+        <li><strong>Firebase</strong> (Google LLC) for analytics, remote configuration, crash reporting, and push messaging, see <a href="https://firebase.google.com/support/privacy">Firebase Privacy</a>.</li>
+        <li><strong>Appodeal</strong> for advertising mediation, see <a href="https://appodeal.com/privacy-policy">Appodeal Privacy</a>.</li>
+      </ul>
+
+      <h2>Your Rights</h2>
+      <p>You have the following rights regarding your data:</p>
+      <ul>
+        <li><strong>Right of access:</strong> Request a copy of the data we hold about you.</li>
+        <li><strong>Right to deletion:</strong> Request that we delete your data from our backend.</li>
+        <li><strong>Right to opt out:</strong> Opt out of personalized advertising via the in-app consent dialog or by turning off Game Center sign-in.</li>
+      </ul>
+      <p>To exercise any of these rights, email us at <a href="mailto:ozgurustundev@gmail.com">ozgurustundev@gmail.com</a>. We will respond within 30 days.</p>
+      <p>These rights are recognized under the General Data Protection Regulation (GDPR) for residents of the European Union, the California Consumer Privacy Act (CCPA) for California residents, and the Turkish Personal Data Protection Law (KVKK) for residents of Turkey, among others.</p>
+
       <h2>Children's Privacy</h2>
-      <p>Lorekeeper is not directed at children under 13. We do not knowingly collect personal information from children.</p>                                    
-                                                                                                                                                                 
+      <p>Lorekeeper is rated 12+ on the App Store and is suitable for older children and above. We do not knowingly collect personal information from children under 13 (or the applicable age in your jurisdiction). If you are a parent or guardian and believe your child has provided us with personal information, please email us at <a href="mailto:ozgurustundev@gmail.com">ozgurustundev@gmail.com</a> and we will promptly delete it.</p>
+
       <h2>Contact</h2>
-      <p>Questions? Reach us at <a href="mailto:ozgurustundev@gmail.com">ozgurustundev@gmail.com</a></p>                                                                     
-                                                                                                                                                                 
-      <div class="footer">© 2026 Lorekeeper. All rights reserved.</div>                                                                                           
+      <p>Questions or concerns? Reach us at <a href="mailto:ozgurustundev@gmail.com">ozgurustundev@gmail.com</a></p>
+
+      <div class="footer">© 2026 Lorekeeper. All rights reserved.</div>                                                                                          
     </div>                                                                                                                                                       
   </body>                                                                                                                                                        
   </html>   
